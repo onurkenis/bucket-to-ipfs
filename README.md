@@ -1,7 +1,7 @@
-# Introduction :arrow_forward:
+## Introduction :arrow_forward:
 This API handles some simple CRUD operations.
 
-# What is used :zap:
+## What is used :zap:
  - Typescript
  - Node JS
  - Express
@@ -10,7 +10,7 @@ This API handles some simple CRUD operations.
  - Inversify
  - Neverthrow
  
-# How to run :rocket:
+## How to run :rocket:
 1. Create the docker image.
 ```shell
 yarn dockerize
@@ -23,5 +23,5 @@ yarn start
 
 3. App will be up and running on port: 3000
 
-# Endpoint :mag:
+## Endpoints :mag:
 [Postman collection is available here.](API.postman_collection.json)
