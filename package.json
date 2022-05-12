@@ -7,8 +7,11 @@
     "alias": "tsc-alias",
     "clean": "rimraf dist tsconfig.tsbuildinfo",
     "compile": "tsc --build && yarn alias",
+    "prisma-generate": "npx prisma generate",
+    "prisma-migrate-dev": "npx prisma migrate dev",
     "dev": "nodemon | pino-pretty",
-    "prisma-generate": "npx prisma generate"
+    "start": "docker-compose up",
+    "dockerize": "docker build -t onurkenis/backend-challange:local -f Dockerfile --progress=plain ."
   },
   "keywords": [],
   "author": "",

@@ -1,6 +1,18 @@
 version: "3.3"
 
 services:
+
+  demo-app-backend:
+    image: onurkenis/backend-challange:local
+    command: npx prisma migrate dev && yarn start
+    env_file: docker-compose.env
+    depends_on:
+      - mysql
+    ports:
+      - "3000:3000"
+    networks:
+      - internal
+
   mysql:
     image: mysql:latest
     platform: linux/x86_64
@@ -12,10 +24,10 @@ services:
       - 3306:3306
     networks:
       - internal
-      
 
 networks:
   internal:
+
 
 volumes:
   data:
