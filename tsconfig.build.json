@@ -1,0 +1,41 @@
+{
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"],
+
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "target": "ES2018",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "composite": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": false,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "rootDir": "./src",
+    "outDir": "dist",
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "paths": {
+      "@implementations/*": ["./implementations/*"],
+      "@interfaces/*": ["./interfaces/*"],
+
+      // For the rest if required
+      "@src/*" : ["./*"]
+    }
+  }
+}

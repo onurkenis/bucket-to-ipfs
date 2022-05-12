@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/prisma/client"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model PersonEntity {
+  id                   Int      @id @default(autoincrement()) 
+  first_name           String   @db.VarChar(128)
+  last_name            String   @db.VarChar(128)
+  created_timestamp    DateTime @default(now())
+  updated_timestamp    DateTime @updatedAt
+
+  @@map("person_t")
+}

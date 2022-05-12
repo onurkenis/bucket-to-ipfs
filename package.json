@@ -1,0 +1,39 @@
+{
+  "name": "backend-challange",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "alias": "tsc-alias",
+    "clean": "rimraf dist tsconfig.tsbuildinfo",
+    "compile": "tsc --build && yarn alias",
+    "dev": "nodemon | pino-pretty",
+    "start": "node --max-old-space-size=4096 dist/index.js | pino-pretty",
+    "prisma-generate": "npx prisma generate"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.32",
+    "@types/shelljs": "^0.8.8",
+    "prisma": "^3.14.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4",
+    "tsc-alias": "^1.2.9",
+    "tsconfig-paths": "^3.9.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.1",
+    "shelljs": "^0.8.4",
+    "rimraf": "^3.0.2",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.3.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0",
+    "inversify": "^6.0.1",
+    "inversify-express-utils": "^6.3.2",
+    "neverthrow": "^4.2.2",
+    "reflect-metadata": "^0.1.13"
+  }
+}
