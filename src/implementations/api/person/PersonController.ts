@@ -63,7 +63,7 @@ export class AdminController extends BaseHttpController {
     });
   }
 
-  @httpPost("/create")
+  @httpPost("/")
   public async addPerson(
     @requestBody() requestBody: IAddPerson,
     @response() res: Response
