@@ -8,7 +8,6 @@
     "clean": "rimraf dist tsconfig.tsbuildinfo",
     "compile": "tsc --build && yarn alias",
     "dev": "nodemon | pino-pretty",
-    "start": "node --max-old-space-size=4096 dist/index.js | pino-pretty",
     "prisma-generate": "npx prisma generate"
   },
   "keywords": [],

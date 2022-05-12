@@ -17,7 +17,7 @@ export class PersonRepository implements IPersonRepository {
       return ResultAsync.fromPromise(
         prisma.personEntity.findFirst({
           where: {
-            id,
+            id: { equals:  Number(id) },
           },
         }),
         (e) => {
