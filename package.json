@@ -11,7 +11,9 @@
     "prisma-migrate-dev": "npx prisma migrate dev",
     "dev": "nodemon | pino-pretty",
     "start": "docker-compose up",
+    "start-db": "docker-compose up -d mysql",
     "dockerize": "docker build -t onurkenis/backend-challange:local -f Dockerfile --progress=plain .",
+    "prepare-and-start:dev": "yarn compile && yarn prisma-generate && yarn start-db && sleep 10 && yarn prisma-migrate-dev && yarn dev",
     "prepare-and-start": "sleep 10 && yarn prisma-migrate-dev && yarn dev"
   },
   "keywords": [],
