@@ -1,5 +1,6 @@
+import { IAddPersonParams } from "@interfaces/api/person";
 import { IPersonService, IPersonServiceType } from "@interfaces/business";
-import { NewPerson, Person } from "@interfaces/objects";
+import { NewPerson, PersonViewModel } from "@interfaces/objects";
 import { Response } from "express";
 import { inject } from "inversify";
 import {
@@ -11,11 +12,6 @@ import {
   requestParam,
   response,
 } from "inversify-express-utils";
-
-interface IAddPerson {
-  firstName: string;
-  lastName: string;
-}
 
 @controller("/people")
 export class AdminController extends BaseHttpController {
@@ -57,15 +53,12 @@ export class AdminController extends BaseHttpController {
       return this.json(undefined, 404);
     }
 
-    return this.json({
-      firstName: getPersonResult.value.firstName,
-      lastName: getPersonResult.value.lastName,
-    });
+    return this.json(new PersonViewModel(getPersonResult.value));
   }
 
   @httpPost("/")
   public async addPerson(
-    @requestBody() requestBody: IAddPerson,
+    @requestBody() requestBody: IAddPersonParams,
     @response() res: Response
   ) {
     const addPersonResult = await this.personService.create(
@@ -83,14 +76,5 @@ export class AdminController extends BaseHttpController {
     }
 
     throw addPersonResult.error;
-  }
-}
-
-class PersonViewModel {
-  public firstName: string;
-  public lastName: string;
-  constructor(person: Person) {
-    this.firstName = person.firstName;
-    this.lastName = person.lastName;
   }
 }
