@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "67ed3400-d386-4a01-b536-89755b5eee5f",
+		"name": "Person API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Person",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50QWRkcmVzcyI6IjB4ZjE3ZjUyMTUxRWJFRjZDNzMzNEZBRDA4MGM1NzA0RDc3MjE2YjczMiIsImlkZW50aXR5SWQiOiIyNzNjNTFmMy03M2JjLTRjMjYtOTU5YS0wYWEyODhhOTljY2EiLCJhdWQiOiJ3YWxsZXQiLCJwZXJtaXNzaW9ucyI6bnVsbCwiaWF0IjoxNjQ3OTA5NjEyLCJleHAiOjE2NDc5MTMyMTIsImlzcyI6Ikh5cGVybmV0LklEIn0.38ZppX9t8vz9wv-8cPc6sxdrzijp0yHipwtX77CNtkY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Onur\",\n    \"lastName\": \"Kenis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/people/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Person",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50QWRkcmVzcyI6IjB4ZjE3ZjUyMTUxRWJFRjZDNzMzNEZBRDA4MGM1NzA0RDc3MjE2YjczMiIsImlkZW50aXR5SWQiOiIyNzNjNTFmMy03M2JjLTRjMjYtOTU5YS0wYWEyODhhOTljY2EiLCJhdWQiOiJ3YWxsZXQiLCJwZXJtaXNzaW9ucyI6bnVsbCwiaWF0IjoxNjQ3OTA5NjEyLCJleHAiOjE2NDc5MTMyMTIsImlzcyI6Ikh5cGVybmV0LklEIn0.38ZppX9t8vz9wv-8cPc6sxdrzijp0yHipwtX77CNtkY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Onur\",\n    \"lastName\": \"Kenis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Created People",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50QWRkcmVzcyI6IjB4ZjE3ZjUyMTUxRWJFRjZDNzMzNEZBRDA4MGM1NzA0RDc3MjE2YjczMiIsImlkZW50aXR5SWQiOiIyNzNjNTFmMy03M2JjLTRjMjYtOTU5YS0wYWEyODhhOTljY2EiLCJhdWQiOiJ3YWxsZXQiLCJwZXJtaXNzaW9ucyI6bnVsbCwiaWF0IjoxNjQ3OTA5NjEyLCJleHAiOjE2NDc5MTMyMTIsImlzcyI6Ikh5cGVybmV0LklEIn0.38ZppX9t8vz9wv-8cPc6sxdrzijp0yHipwtX77CNtkY",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Onur\",\n    \"lastName\": \"Kenis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/people/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
