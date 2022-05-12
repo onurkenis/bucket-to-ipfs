@@ -23,5 +23,13 @@ yarn start
 
 3. App will be up and running on port: 3000
 
+## Local Development :computer:
+1. Just run the following.
+```shell
+yarn prepare-and-start:dev
+```
+
+2. App will be up and running on port: 3000
+
 ## Endpoints :mag:
 [Postman collection is available here.](API.postman_collection.json)
