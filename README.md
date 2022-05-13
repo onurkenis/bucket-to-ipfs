@@ -26,7 +26,7 @@ yarn start
 ## Local Development :computer:
 1. Just run the following.
 ```shell
-yarn prepare-and-start:dev
+yarn start:dev
 ```
 
 2. App will be up and running on port: 3000
