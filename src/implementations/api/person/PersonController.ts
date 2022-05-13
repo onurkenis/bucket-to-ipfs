@@ -14,7 +14,7 @@ import {
 } from "inversify-express-utils";
 
 @controller("/people")
-export class AdminController extends BaseHttpController {
+export class PersonController extends BaseHttpController {
   constructor(
     @inject(IPersonServiceType) protected personService: IPersonService
   ) {
