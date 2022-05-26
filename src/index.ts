@@ -15,4 +15,5 @@ container.load(appModule);
 // Bind the container to itself
 container.bind<Container>(IInjectionContainerType).toConstantValue(container);
 
-new ExpressServer(container).listen(3001);
+// TODO: get the port from env variable
+new ExpressServer(container).listen(3000);
