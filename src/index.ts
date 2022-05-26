@@ -15,4 +15,4 @@ container.load(appModule);
 // Bind the container to itself
 container.bind<Container>(IInjectionContainerType).toConstantValue(container);
 
-new ExpressServer(container).listen(3000);
+new ExpressServer(container).listen(3001);

@@ -8,3 +8,6 @@ out/linecounter.txt
 migration_lock.toml
 .DS_Store
 src/prisma
+credentials/*.json
+downloads
+.ipfs/

@@ -13,8 +13,9 @@
     "start:dev": "yarn prepare-and-start:dev",
     "start": "docker-compose up",
     "start-db": "docker-compose up -d mysql",
+    "start-ipfs": "docker-compose up -d ipfs",
     "dockerize": "docker build -t onurkenis/backend-challange:local -f Dockerfile --progress=plain .",
-    "prepare-and-start:dev": "yarn compile && yarn prisma-generate && yarn start-db && sleep 10 && yarn prisma-migrate-dev && yarn dev",
+    "prepare-and-start:dev": "yarn compile && yarn prisma-generate && yarn start-ipfs && yarn start-db && sleep 10 && yarn prisma-migrate-dev && yarn dev",
     "prepare-and-start": "sleep 10 && yarn prisma-migrate-dev && yarn dev"
   },
   "keywords": [],
@@ -24,16 +25,20 @@
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.32",
     "@types/shelljs": "^0.8.8",
+    "@google-cloud/pubsub": "^2.19.0",
+    "@google-cloud/storage": "^5.18.2",
     "prisma": "^3.14.0",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",
     "tsc-alias": "^1.2.9",
+    "ts-brand": "^0.0.2",
     "tsconfig-paths": "^3.9.0",
     "tsconfig-paths-webpack-plugin": "^3.5.1",
     "shelljs": "^0.8.4",
     "rimraf": "^3.0.2",
     "nodemon": "^2.0.7",
-    "pino-pretty": "^4.3.0"
+    "pino-pretty": "^4.3.0",
+    "ipfs-http-client": "^55.0.0"
   },
   "dependencies": {
     "@prisma/client": "^3.14.0",

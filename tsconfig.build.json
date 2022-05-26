@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "strict": true,
-    "lib": ["esnext"],
+    "lib": ["esnext", "DOM"],
     "esModuleInterop": true,
     "target": "ES2018",
     "module": "commonjs",
@@ -35,7 +35,7 @@
       "@interfaces/*": ["./interfaces/*"],
 
       // For the rest if required
-      "@src/*" : ["./*"]
+      "@src/*": ["./*"]
     }
   }
 }

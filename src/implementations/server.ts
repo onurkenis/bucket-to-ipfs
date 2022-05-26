@@ -7,6 +7,7 @@ import { InversifyExpressServer, interfaces } from "inversify-express-utils";
 import { ResultAsync } from "neverthrow";
 
 import "@implementations/api/person/PersonController";
+import "@implementations/api/file/FileController";
 
 export class ExpressServer {
   protected server: InversifyExpressServer;
